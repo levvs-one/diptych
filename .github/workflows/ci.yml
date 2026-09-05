@@ -16,7 +16,6 @@ jobs:
     env:
       DOTNET_GENERATE_ASPNET_CERTIFICATE: 'false'
       DOTNET_CLI_TELEMETRY_OPTOUT: '1'
-      VISITPLATE_TEST_ROOT: ${{ runner.temp }}/Visitplate.Tests
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -29,6 +28,8 @@ jobs:
       - name: Build
         run: dotnet build Visitplate.sln -c Release --no-restore
       - name: Test
+        env:
+          VISITPLATE_TEST_ROOT: ${{ runner.temp }}/Visitplate.Tests
         run: dotnet test --solution Visitplate.sln -c Release --no-build
       - name: Publish portable Windows application
         run: dotnet publish src/Visitplate.App/Visitplate.App.csproj -c Release -r win-x64 --self-contained true -p:RestoreLockedMode=true -p:DebugType=None -p:DebugSymbols=false -o artifacts/Visitplate
