@@ -1,0 +1,22 @@
+<Window x:Class="Visitplate.App.NewProjectWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Новая папка выезда" Width="560" SizeToContent="Height" ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner" Style="{StaticResource {x:Type Window}}">
+    <StackPanel Margin="24">
+        <TextBlock Text="Новая папка выезда" FontSize="22" FontWeight="SemiBold" Margin="0,0,0,16" />
+        <TextBlock Text="Проект и копии снимков будут храниться здесь. Выберите обычный локальный диск." TextWrapping="Wrap" Margin="0,0,0,20" />
+        <TextBlock Text="Родительская папка" Style="{StaticResource FieldLabel}" />
+        <DockPanel Margin="0,0,0,16">
+            <Button Content="Выбрать" DockPanel.Dock="Right" Click="ChooseParentClick" Margin="8,0,0,0" />
+            <TextBox x:Name="ParentBox" AutomationProperties.Name="Родительская папка нового выезда" IsReadOnly="True" />
+        </DockPanel>
+        <TextBlock Text="Имя новой папки" Style="{StaticResource FieldLabel}" />
+        <TextBox x:Name="NameBox" Text="Выезд" AutomationProperties.Name="Имя новой папки выезда" Margin="0,0,0,8" />
+        <TextBlock x:Name="ErrorText" TextWrapping="Wrap" Margin="0,0,0,20" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Отмена" IsCancel="True" Margin="0,0,8,0" />
+            <Button Content="Создать" IsDefault="True" Click="CreateClick" Style="{StaticResource PrimaryButton}" />
+        </StackPanel>
+    </StackPanel>
+</Window>

@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net10.0-windows7.0": {
+      "MSTest.TestAdapter": {
+        "type": "Direct",
+        "requested": "[4.4.0, )",
+        "resolved": "4.4.0",
+        "contentHash": "xZdlCr2r/6XFOo67jcemJsfm46tTgXdqtnISFIuDUAJf5Yxk07XpTC9eMUErLdlYD8QM9zw07eOPre7+nTayUg==",
+        "dependencies": {
+          "MSTest.TestFramework": "4.4.0",
+          "Microsoft.TestPlatform.ObjectModel": "18.9.0",
+          "Microsoft.Testing.Extensions.Telemetry": "2.4.0",
+          "Microsoft.Testing.Extensions.TrxReport.Abstractions": "2.4.0",
+          "Microsoft.Testing.Platform.MSBuild": "2.4.0"
+        }
+      },
+      "MSTest.TestFramework": {
+        "type": "Direct",
+        "requested": "[4.4.0, )",
+        "resolved": "4.4.0",
+        "contentHash": "sfJzj3ntdU/GahJd2n+WQLgKqbV0RRMJVXtjRwRQLhblevlzLSDAOocOKANhfMaCEQ5dMt6348ztbVq/Ap60xA==",
+        "dependencies": {
+          "MSTest.Analyzers": "4.4.0"
+        }
+      },
+      "bblanchon.PDFium.Linux": {
+        "type": "Transitive",
+        "resolved": "154.0.8035",
+        "contentHash": "eWTK37C4KjzbcqUtfsLD4nIdUgoh4BFhrRdm4GTH0uuKa/klCZbqCBwq3Zk2uZhl06uk1r0N/e3sog0t94aPcQ=="
+      },
+      "bblanchon.PDFium.macOS": {
+        "type": "Transitive",
+        "resolved": "154.0.8035",
+        "contentHash": "hKhPX5Hfn9tQUCUEgYEmO+0sZxXud/zwhCU37zXWqOcwyhWhs9Zsv7EiUKSRdJrgYrruzuJzVuFvT4W4w3xA9A=="
+      },
+      "bblanchon.PDFium.Win32": {
+        "type": "Transitive",
+        "resolved": "154.0.8035",
+        "contentHash": "eBidIMvH1+76ajznz5tdMx0A/odyPLKnQaggrL5tX1+al5/JEgwVtfHyzDGfIzuYXj5MLghyb+6KS3P/JATEPw=="
+      },
+      "Microsoft.ApplicationInsights": {
+        "type": "Transitive",
+        "resolved": "2.23.0",
+        "contentHash": "nWArUZTdU7iqZLycLKWe0TDms48KKGE6pONH2terYNa8REXiqixrMOkf1sk5DHGMaUTqONU2YkS4SAXBhLStgw=="
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions": {
+        "type": "Transitive",
+        "resolved": "8.0.2",
+        "contentHash": "3iE7UF7MQkCv1cxzCahz+Y/guQbTqieyxyaWKhrRO91itI9cOKO76OHeQDahqG4MmW5umr3CcCvGmK92lWNlbg=="
+      },
+      "Microsoft.Extensions.Logging.Abstractions": {
+        "type": "Transitive",
+        "resolved": "8.0.3",
+        "contentHash": "dL0QGToTxggRLMYY4ZYX5AMwBb+byQBd/5dMiZE07Nv73o6I5Are3C7eQTh7K2+A4ct0PVISSr7TZANbiNb2yQ==",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2"
+        }
+      },
+      "Microsoft.Testing.Extensions.Telemetry": {
+        "type": "Transitive",
+        "resolved": "2.4.0",
+        "contentHash": "JeP1RFqBa11fWmBk8xEfZcMKr4rxWSyI6OZ+659V069CaMkTEOQBW2UdSSeNz3absOsygcn7JJkzerC4LGnZ9w==",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "2.23.0",
+          "Microsoft.Testing.Platform": "[2.4.0, 3.0.0)"
+        }
+      },
+      "Microsoft.Testing.Extensions.TrxReport.Abstractions": {
+        "type": "Transitive",
+        "resolved": "2.4.0",
+        "contentHash": "uRb+4qM42dFDg4kWJZ2kFEcwESNVCRZJjItp5vETorN3rSJGysP617LqYirOcrCYmxg+obPreHMM5JcsNDKtBw==",
+        "dependencies": {
+          "Microsoft.Testing.Platform": "[2.4.0, 3.0.0)"
+        }
+      },
+      "Microsoft.Testing.Platform": {
+        "type": "Transitive",
+        "resolved": "2.4.0",
+        "contentHash": "dp1N3P1ujb0ztwFgqz2o/ItEvq+pm19/AiA+Xq7Zpcy7oPMcxDBZLYGtf0LlU1MveEBJuKVjZhI+LnkfcH/0jQ=="
+      },
+      "Microsoft.Testing.Platform.MSBuild": {
+        "type": "Transitive",
+        "resolved": "2.4.0",
+        "contentHash": "qr5M6h16YHMJLFDcWELFVMMpGte2BUmveBZKT5YoBV+bmuJRPu9bv/Zqke4yQuOEKRNxoAETrG5jr+/6Rnr3Hg==",
+        "dependencies": {
+          "Microsoft.Testing.Platform": "[2.4.0, 3.0.0)"
+        }
+      },
+      "Microsoft.TestPlatform.ObjectModel": {
+        "type": "Transitive",
+        "resolved": "18.9.0",
+        "contentHash": "Fz/qXC52VXXopzHj7v2reCKcCqSxkTDCkEDfkNAH0vni/7qK/KLMiEYtRmnUanxO2F2g2zZZ60qCpxF0AF7URA=="
+      },
+      "MSTest.Analyzers": {
+        "type": "Transitive",
+        "resolved": "4.4.0",
+        "contentHash": "8g2KL2LjsXXVywvQb0uWQBANOONVnRf6cTSbON9ar6gIw08oSBY7Z3PJlC8sHbqOVvCr7srrcWiKzb12SUoV2w=="
+      },
+      "PDFiumCore": {
+        "type": "Transitive",
+        "resolved": "154.0.8035",
+        "contentHash": "RM5FjCDJK+gdh/XV/ABC9dXuYgvhTi6lBg6O7dV7beT2XLEc8EuvPic27sm7reIiuVN7qdj0YJa2ovxPH0mFPw==",
+        "dependencies": {
+          "bblanchon.PDFium.Linux": "154.0.8035",
+          "bblanchon.PDFium.Win32": "154.0.8035",
+          "bblanchon.PDFium.macOS": "154.0.8035"
+        }
+      },
+      "PDFsharp-MigraDoc-WPF": {
+        "type": "Transitive",
+        "resolved": "6.2.4",
+        "contentHash": "0r3+I3H4BIv2Mt5+3ajQnilY5kqs6fByoVdNly1A2jGOJwjW5qaWE+ohgi9hbMY3hK/JwcxvuChhHz4fi5DO3Q==",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.3",
+          "PDFsharp-WPF": "6.2.4"
+        }
+      },
+      "PDFsharp-WPF": {
+        "type": "Transitive",
+        "resolved": "6.2.4",
+        "contentHash": "wD2byoUNGc/IDmSSSPLGGCNMXf4TybnjKlcYa40nuWIYLVA4DSvnCvWr7HbsBEwFvAYRP6DceQ4MN35COD/pdw==",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.3"
+        }
+      },
+      "Visitplate": {
+        "type": "Project",
+        "dependencies": {
+          "PDFiumCore": "[154.0.8035, 154.0.8035]",
+          "Visitplate.Core": "[1.0.0, )",
+          "bblanchon.PDFium.Win32": "[154.0.8035, 154.0.8035]"
+        }
+      },
+      "visitplate.core": {
+        "type": "Project",
+        "dependencies": {
+          "PDFsharp-MigraDoc-WPF": "[6.2.4, )"
+        }
+      }
+    }
+  }
+}

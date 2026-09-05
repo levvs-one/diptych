@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    env:
+      DOTNET_GENERATE_ASPNET_CERTIFICATE: 'false'
+      DOTNET_CLI_TELEMETRY_OPTOUT: '1'
+      VISITPLATE_TEST_ROOT: ${{ runner.temp }}/Visitplate.Tests
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          global-json-file: global.json
+      - name: Restore locked dependencies
+        run: dotnet restore Visitplate.sln --locked-mode
+      - name: Build
+        run: dotnet build Visitplate.sln -c Release --no-restore
+      - name: Test
+        run: dotnet test --solution Visitplate.sln -c Release --no-build
+      - name: Publish portable Windows application
+        run: dotnet publish src/Visitplate.App/Visitplate.App.csproj -c Release -r win-x64 --self-contained true -p:RestoreLockedMode=true -p:DebugType=None -p:DebugSymbols=false -o artifacts/Visitplate
+      - name: Include documentation and licenses
+        shell: pwsh
+        run: |
+          Copy-Item -LiteralPath LICENSE,README.md,THIRD-PARTY-NOTICES.md -Destination artifacts/Visitplate
+          Copy-Item -LiteralPath docs -Destination artifacts/Visitplate/docs -Recurse
+          Copy-Item -LiteralPath licenses -Destination artifacts/Visitplate/licenses -Recurse
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: Visitplate-windows-x64
+          path: artifacts/Visitplate
+          if-no-files-found: error
+          retention-days: 14

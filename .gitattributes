@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.ttf binary
+*.png binary
+*.jpg binary
+*.pdf binary
+licenses/** -text

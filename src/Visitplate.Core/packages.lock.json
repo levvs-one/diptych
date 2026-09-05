@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net10.0-windows7.0": {
+      "PDFsharp-MigraDoc-WPF": {
+        "type": "Direct",
+        "requested": "[6.2.4, )",
+        "resolved": "6.2.4",
+        "contentHash": "0r3+I3H4BIv2Mt5+3ajQnilY5kqs6fByoVdNly1A2jGOJwjW5qaWE+ohgi9hbMY3hK/JwcxvuChhHz4fi5DO3Q==",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.3",
+          "PDFsharp-WPF": "6.2.4"
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions": {
+        "type": "Transitive",
+        "resolved": "8.0.2",
+        "contentHash": "3iE7UF7MQkCv1cxzCahz+Y/guQbTqieyxyaWKhrRO91itI9cOKO76OHeQDahqG4MmW5umr3CcCvGmK92lWNlbg=="
+      },
+      "Microsoft.Extensions.Logging.Abstractions": {
+        "type": "Transitive",
+        "resolved": "8.0.3",
+        "contentHash": "dL0QGToTxggRLMYY4ZYX5AMwBb+byQBd/5dMiZE07Nv73o6I5Are3C7eQTh7K2+A4ct0PVISSr7TZANbiNb2yQ==",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2"
+        }
+      },
+      "PDFsharp-WPF": {
+        "type": "Transitive",
+        "resolved": "6.2.4",
+        "contentHash": "wD2byoUNGc/IDmSSSPLGGCNMXf4TybnjKlcYa40nuWIYLVA4DSvnCvWr7HbsBEwFvAYRP6DceQ4MN35COD/pdw==",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.3"
+        }
+      }
+    },
+    "net10.0-windows7.0/win-x64": {}
+  }
+}
